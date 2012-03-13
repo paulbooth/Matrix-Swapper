@@ -1,0 +1,137 @@
+/*
+
+Darko Bunic
+http://www.redips.net/
+Apr, 2011.
+
+*/
+
+body {
+	font-family: arial;
+	margin: 0px;
+}
+
+
+
+/* make drag containers visible */
+#drag, #equality,
+#buttons {
+	border: 2px dashed LightBlue;
+	padding: 10px;
+	margin: 10px auto;
+	float: left;
+	clear: none;
+}
+
+/* button area above tables */
+#buttons {
+	text-align: right;
+	border-color: white;
+	padding-bottom: 0px;
+}
+
+/* set border-collapse for tables */
+table {
+	border-collapse: collapse;
+	/* width: 580px; */
+}
+
+/* set table row height */
+table tr {
+	height: 32px;
+}
+
+/* table cells */
+td {
+	/* IE8 BUG - applying alpha filter on TD will overwrite TD border - thank you MicroSoft for tearing my hair :P */
+	/* I also tried with outline and that was fine, but Opera11 place high zIndex to outline grid and that looks wierd */
+	/* so, I paint TR to white with JavaScript and applying aplha filter to table content (DIV elements) */
+	border: 1px solid white;
+	height: 22px;
+}
+
+/* table titles */
+th {
+	font-size: 14pt;
+}
+
+/* drag object (DIV inside table cell) */
+.drag {
+	margin: auto;
+	margin-bottom: 1px;
+	margin-top: 1px;
+	text-align: center;
+	font-size: 8pt;
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	border-width: 2px;
+	border-style: solid;
+	background-color: white;
+	/* round corners */
+	border-radius: 4px; /* Opera, Chrome */
+	-moz-border-radius: 4px; /* FF */
+}
+
+/* equality cell object (DIV inside table cell in equality table) */
+.equality_cell {
+	margin: auto;
+	margin-bottom: 1px;
+	margin-top: 1px;
+	text-align: center;
+	font-size: 8pt;
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	border-width: 2px;
+	border-style: solid;
+	background-color: white;
+	/* round corners */
+	border-radius: 4px; /* Opera, Chrome */
+	border-color: #999;
+	-moz-border-radius: 4px; /* FF */
+}
+
+
+/* orange DIV elements */
+.orange {
+	border-color: #FF8A58;
+	background-color: #FF8A58;
+}
+
+/* blue DIV elements */
+.blue {
+	border-color: SteelBlue;
+	/* background-color: SteelBlue; */
+}
+
+
+/* row dark */
+.rd {
+	background-color: #ddd;
+}
+
+/* row light */
+.rl {
+	background-color: #eee;
+}
+
+/* row red light*/
+.rrl {
+	background-color: #e44;
+}
+
+/* row red dark*/
+.rrd {
+	background-color: #c22;
+}
+
+/* blue button */
+.button {
+	color: white;
+	background-color: #6B8AA3;
+	border-width: 1px;
+	/* round corners */
+	border-radius: 5px; /* Opera, Chrome */
+	-moz-border-radius: 5px; /* FF */
+}

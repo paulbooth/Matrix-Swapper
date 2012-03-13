@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta name="author" content="Darko Bunic"/>
+		<meta name="description" content="Drag and drop table content/rows with JavaScript"/>
+		<link rel="stylesheet" href="swapper_style.css" type="text/css" media="screen"/>
+		<script type="text/javascript">
+			var redips_url = '/javascript/drag-and-drop-table-content-animation/';
+		</script>
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<script type="text/javascript" src="redips-drag.js"></script>
+		<script type="text/javascript" src="swapper_script.js"></script>
+		
+		
+		<title>Olin-Babson matrix swapper</title>
+	</head>
+	<body>
+			<div id="parent">
+				<div>
+				Number of Faculty: <input type="text" id="fac_input" size="3"/>
+				Committee Size: <input type="text" id="com_input" size="3"/>
+				</div>
+			<div id="drag" >
+				<table id="table_id">
+					<colgroup>
+						<col width="20"/>
+						<col width="20"/>
+						<col width="20"/>
+						<col width="20"/>
+						<col width="20"/>
+						<col width="20"/>
+						<col width="20"/>
+					</colgroup>
+					<tbody id="body_id">
+						<tr class="rl" id="tr_id">
+							<td><div id="11" class="drag orange">11</div></td>
+							<td><div id="12" class="drag orange">12</div></td>
+							<td><div id="13" class="drag orange">13</div></td>
+							<td><div id="14" class="drag orange">14</div></td>
+							<td><div id="15" class="drag orange">15</div></td>
+							<td><div id="16" class="drag orange">16</div></td>
+							<td><div id="17" class="drag orange">17</div></td>
+						</tr>
+						<tr class="rd" id="tr_id2">
+							<td><div id="21" class="drag orange">21</div></td>
+							<td><div id="22" class="drag orange">22</div></td>
+							<td><div id="23" class="drag orange">23</div></td>
+							<td><div id="24" class="drag orange">24</div></td>
+							<td><div id="25" class="drag orange">25</div></td>
+							<td><div id="26" class="drag orange">26</div></td>
+							<td><div id="27" class="drag orange">27</div></td>
+						</tr>
+						<tr class="rl">
+							<td><div id="31" class="drag orange">31</div></td>
+							<td><div id="32" class="drag orange">32</div></td>
+							<td><div id="33" class="drag orange">33</div></td>
+							<td><div id="34" class="drag orange">35</div></td>
+							<td><div id="35" class="drag orange">35</div></td>
+							<td><div id="36" class="drag orange">36</div></td>
+							<td><div id="37" class="drag orange">37</div></td>
+						</tr>
+						<tr class="rd">
+							<td><div id="41" class="drag orange">41</div></td>
+							<td><div id="42" class="drag orange">42</div></td>
+							<td><div id="43" class="drag orange">43</div></td>
+							<td><div id="44" class="drag orange">44</div></td>
+							<td><div id="45" class="drag orange">45</div></td>
+							<td><div id="46" class="drag orange">46</div></td>
+							<td><div id="47" class="drag orange">47</div></td>
+						</tr>
+						<tr class="rl">
+							<td><div id="51" class="drag orange">51</div></td>
+							<td><div id="52" class="drag orange">52</div></td>
+							<td><div id="53" class="drag orange">53</div></td>
+							<td><div id="54" class="drag orange">54</div></td>
+							<td><div id="55" class="drag orange">55</div></td>
+							<td><div id="56" class="drag orange">56</div></td>
+							<td><div id="57" class="drag orange">57</div></td>
+						</tr>
+						<tr class="rd">
+							<td><div id="61" class="drag orange">61</div></td>
+							<td><div id="62" class="drag orange">62</div></td>
+							<td><div id="63" class="drag orange">63</div></td>
+							<td><div id="64" class="drag orange">64</div></td>
+							<td><div id="65" class="drag orange">65</div></td>
+							<td><div id="66" class="drag orange">66</div></td>
+							<td><div id="67" class="drag orange">67</div></td>
+						</tr>
+						<tr class="rl">
+							<td><div id="71" class="drag orange">71</div></td>
+							<td><div id="72" class="drag orange">72</div></td>
+							<td><div id="73" class="drag orange">73</div></td>
+							<td><div id="74" class="drag orange">74</div></td>
+							<td><div id="75" class="drag orange">75</div></td>
+							<td><div id="76" class="drag orange">76</div></td>
+							<td><div id="77" class="drag orange">77</div></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="equality">
+			</div>
+		</div>
+	</body>
+</html>
