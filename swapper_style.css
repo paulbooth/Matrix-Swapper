@@ -116,6 +116,11 @@ th {
 	background-color: #eee;
 }
 
+/* row highlighted */
+.rh {
+	background-color: #ee0;
+}
+
 /* row red light*/
 .rrl {
 	background-color: #e44;

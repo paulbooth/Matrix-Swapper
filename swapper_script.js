@@ -249,12 +249,23 @@ function load_subsets_from_input() {
 	}
 }
 function load_all_subsets(n,k) {
-	init_swapper(get_matrix(n,k))
+	var matrix = get_matrix(n,k)
+	// In the special case of a 2n_n case, we know how to build up a _working_ example
+	if (n == 2 * k) {
+		var matrix_alternated = []
+		for (var i = 0; i < matrix.length/2; i++) {
+			matrix_alternated.push(matrix[i]);
+			matrix_alternated.push(matrix[matrix.length - i - 1])
+		}
+		matrix = matrix_alternated;
+	}
+	init_swapper(matrix)
 }
 
 // get all subsets of n faculty (row of length n) with k students (1's)
 function get_matrix(n, k) {
 	var matrix = [];
+	// only one way to do n == k - a single row
 	if (k == n) {
 		var row = [];
 		for (var i = 0; i < n ; i++) {
@@ -262,6 +273,7 @@ function get_matrix(n, k) {
 		}
 		return [row];
 	} else if (k == 1) {
+		// only one way of getting the identity
 		for (var j = 0; j < n; j++) {
 			var row = [];
 			for (var i = 0; i < n ; i++) {
@@ -280,7 +292,7 @@ function get_matrix(n, k) {
 		for (var i = 0; i < matrix0.length; i++) {
 			matrix.push([0].concat(matrix0[i]))
 		}
-		return matrix;
+		return matrix;	
 	}
 }
 /**
